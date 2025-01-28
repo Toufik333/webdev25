@@ -5,7 +5,6 @@ const message2 = document.getElementById('message2');
 const input1 = document.getElementById('input1');
 const form = document.getElementById('userForm');
 
-console.log(form);
 
 console.log(hoverdiv);
 
@@ -26,5 +25,28 @@ hoverdiv.addEventListener('mouseout', () => {
 
 input1.addEventListener('input', (e) => {
     message2.innerHTML = e.target.value;
+});
+
+// form submit event
+
+const name = form.elements['username'];
+const email = form.elements['email'];
+const password = form.elements['password'];
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("Name: ",name.value);
+    console.log("Email: ",email.value);
+
+    if(!email.value.includes('@')){
+        alert('Invalid email');
+    }
+    else if(!name.value || !email.value || !password.value){
+        alert('Please fill all the fields');
+    }
+    else{
+        alert('Form submitted');
+    }
+
 });
 
