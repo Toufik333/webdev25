@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctorCare | HTML, Tailwind CSS, JavaScript Landing Page</title>
+
+        <!-- gogle fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+          rel="stylesheet"
+        />
+
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00856F",
+              "green-light": "#DCE9E2",
+              "green-light-02": "#F7F9F9",
+              "brand-beige": "#FFFAF1",
+              "brand-green-hover": "#00453A",
+              "secondary": "#495057",
+
+            },
+            fontFamily: {
+              primary: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .active {
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- custom css -->
+     <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  </head>
+  <body class="bg-green-light-02 font-primary overflow-x-hidden" >
+    <!-- header section -->
+    <header id="header" class="bg-green-light text-primary fixed right-0 top-0 left-0 w-full z-50">
+      <nav class="container mx-auto max-w-screen-xl flex justify-between items-center py-4 px-4">
+        <!-- logo -->
+        <div class="text-xl font-bold  ">
+          <a href="/" class="text-black">Doctor <span class="text-primary ">Care</span></a>
+        </div>
+        <!-- nav links -->
+        <ul class="hidden md:flex items-center space-x-8">
+          <li>
+            <a href="#home" class="text-secondary hover:text-primary">Home</a>
+          </li>
+          <li>
+            <a href="#services" class="text-secondary hover:text-primary">Services</a>
+          </li>
+          <li>
+            <a href="#about" class="text-secondary hover:text-primary">About</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-secondary hover:text-primary">Contact</a>
+          </li>
+        </ul>
+
+        <!-- call to action button -->
+         <div class="hidden md:block">
+          <a id="contact-button" href="#contact" class="text-primary md:w-56 px-4 py-2 rounded-full hover:text-white border border-primary transition-all duration-200 md:flex items-center justify-center">Book Appointment</a>
+         </div>
+
+        <!-- mobile menu -->
+        <div class=" md:hidden">
+          <button id="mobile-menu-btn" class="text-secondary navbar-burger flex items-center p-3">
+            <img src="./images/menu-icon.svg" alt="menu icon" class="block h-4 w-4 fill-current"/>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- mobile menu -->
+
+    <!-- hero / banner -->
+    <section class="py-28 bg-green-light flex items-center justify-between gap-8 ">
+      <div class="container mx-auto max-w-screen-lg flex md:flex-row flex-col items-center justify-between p-4">
+        <!-- text -->
+        <div class="w-full md:w-2/3 text-center md:text-left mb-8 md:mb-0 hero-content">
+          <h2 class="text-sm font-bold text-primary mb-4">Your Health is Our Priority</h2>
+          <p class="text-secondary text-4xl md:text-6xl font-bold  mb-6">We provide the best healthcare services for you and your family. Our team of experienced doctors and nurses are here to help you.</p>
+
+          <p class="text-secondary text-lg md:text-xl mb-8 md:w-4/5">We offer a wide range of services to meet your healthcare needs, from routine check-ups to specialized treatments. Trust us to be your partner in health and wellness.</p>
+
+          <button class="text-white bg-primary px-8 py-3 rounded-full hover:bg-brand-green-hover transition-all duration-200 text-lg justify-center w-full sm:w-auto">
+            <i class="ri-whatsapp-line "></i>
+            <a href="#services" >Learn More</a>
+          </button>
+            
+        </div>
+        <!-- image -->
+        <div class="w-full md:w-1/3 flex justify-center md:justify-end hero-image">
+          <img src="./images/hero-banner.png" alt="hero image" class="w-full md:w-96"/>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- stat section -->
+     <section class="container max-w-screen-md mx-auto bg-brand-beige md:h-52 md:-mt-28 mt-5 rounded-xl shadow-lg starts-section">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+          <div class="text-center py-8 rounded-md">
+            <h4 class="text-5xl font-bold mb-1 md:border-r border-b md:border-b-0">+3500</h4>
+            <p class="text-primary" > paritence Appointment</p>
+          </div>
+          <div class="text-center py-8 rounded-md ">
+            <h4 class="text-5xl font-bold mb-1 md:border-r border-b md:border-b-0">+14</h4>
+            <p class="text-primary" > paragraph something</p>
+          </div>
+          <div class="text-center py-8 rounded-md">
+            <h4 class="text-5xl font-bold mb-1">+10</h4>
+            <p class="text-primary" > Another paragraph</p>
+          </div>
+        </div>
+
+     </section>
+
+    <!-- services section -->
+
+    <section class="bg-green-light-02  py-12  md:py-20" id="services">
+      <div class="container max-w-screen-md mx-auto p-4 text-center">
+        <div class="services-content">
+        <p class="text-primary text-lg mb-4 mt-12"> Services</p>
+        <h2 class="md:text-4xl text-3xl font-bold text-secondary mb-8">We offer a wide range of services to meet your healthcare needs</h2>
+        </div>
+
+        <!-- inject service item into card -->
+        <div id="service-container" class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8 mb-12">
+          <div></div>
+
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- js script tags -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/animation.js"></script>
+  </body>
+</html>

@@ -1,12 +1,12 @@
 // practical example of fetch api
 
-const fetchdata = () => {
+const fetchdata = async () => {
     try {
-        const response = fetch('https://jsonplaceholder.typicode.com/posts/1');
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        const data = response.json();
+        const data = await response.json();
         console.log(data);
 
     } catch (error) {
@@ -14,3 +14,4 @@ const fetchdata = () => {
     }
 
 }
+fetchdata();

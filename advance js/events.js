@@ -13,7 +13,7 @@ console.log(msgclcbtn1);
 // add click event listener to the button
 msgclcbtn1.addEventListener('click', () => {
     //alert('Button clicked');
-    message.innerHTML = 'Button clicked';
+    message.innerHTML = '<h1>Hello, World!</h1>';
 });
 
 hoverdiv.addEventListener('mouseover', () => {
